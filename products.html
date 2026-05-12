@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Our Products</title>
+    <link rel="icon" href="Milk-image.png">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <div class="header">
+        <h1>Our Products</h1>
+    </div>
+
+    <div class="navbar">
+
+        <a href="index.html">Home</a>
+
+        <a href="products.html">Products</a>
+
+        <a href="about.html">About</a>
+
+        <a href="https://wa.me/918511877623"
+        target="_blank">
+            Contact
+        </a>
+
+    </div>
+
+    <div class="container">
+
+        <div class="products">
+
+            <div class="product-card">
+                <img src="Milk-image.png" alt="Milk">
+                <p>Fresh Milk</p>
+                <p>₹80 / L</p>
+            </div>
+
+            <div class="product-card">
+                <img src="pure_Ghee_image.png" alt="Ghee">
+                <p>Pure Ghee</p>
+                <p>₹1000 / kg</p>
+            </div>
+
+            <div class="product-card">
+                <img src="paneer.png" alt="Paneer">
+                <p>Malai Paneer</p>
+                <p>₹400 / kg</p>
+            </div>
+
+            <div class="product-card">
+                <img src="Malai_Dahi-image.png" alt="Dahi">
+                <p>Malai Dahi</p>
+                <p>₹90 / kg</p>
+            </div>
+
+            <div class="product-card">
+                <img src="buttermilk-image.png" alt="Buttermilk">
+                <p>Buttermilk</p>
+                <p>₹20 / L</p>
+            </div>
+
+        </div>
+
+        <div class="order-box">
+
+            <h2>Place Your Order</h2>
+
+            <input type="text"
+            id="name"
+            placeholder="Your Name">
+
+            <input type="text"
+            id="phone"
+            placeholder="Phone Number">
+
+            <select id="product">
+
+                <option>Select Product</option>
+                <option>Fresh Milk</option>
+                <option>Pure Ghee</option>
+                <option>Malai Paneer</option>
+                <option>Malai Dahi</option>
+                <option>Buttermilk</option>
+
+            </select>
+
+            <input type="text"
+            id="quantity"
+            placeholder="Quantity">
+
+            <button onclick="sendOrder()">
+                Submit Order
+            </button>
+
+        </div>
+
+        <a href="https://wa.me/918511877623"
+        target="_blank">
+
+            <button>
+                Order on WhatsApp
+            </button>
+
+        </a>
+
+    </div>
+
+    <div class="footer">
+
+        <h3>Charan Dairy</h3>
+
+        <p>Fresh & Pure Dairy Products</p>
+
+        <p>📞 8511877623</p>
+
+        <p>📍 Jamnagar, Gujarat</p>
+
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="about.html">About</a>
+        </div>
+
+        <p class="copyright">
+            © 2026 Charan Dairy | All Rights Reserved
+        </p>
+
+    </div>
+
+    <script>
+
+        function sendOrder() {
+
+            var name =
+            document.getElementById("name").value;
+
+            var phone =
+            document.getElementById("phone").value;
+
+            var product =
+            document.getElementById("product").value;
+
+            var quantity =
+            document.getElementById("quantity").value;
+
+            var message =
+            "Hello, I want to order:%0A";
+
+            message += "Name: " + name + "%0A";
+
+            message += "Phone: " + phone + "%0A";
+
+            message += "Product: " + product + "%0A";
+
+            message += "Quantity: " + quantity;
+
+            var url =
+            "https://wa.me/918511877623?text=" + message;
+
+            window.open(url, "_blank");
+        }
+
+    </script>
+</body>
+</html>
